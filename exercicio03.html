@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - JAVASCRIPT</title>
+</head>
+<body>
+    <form>
+        <label><input type="radio" name="cor" value="red" onchange="mudarCor(this.value)"> Vermelho</label><br>
+        <label><input type="radio" name="cor" value="green" onchange="mudarCor(this.value)"> Verde</label><br>
+        <label><input type="radio" name="cor" value="blue" onchange="mudarCor(this.value)"> Azul</label><br>
+        <label><input type="radio" name="cor" value="yellow" onchange="mudarCor(this.value)"> Amarelo</label>
+    </form>
+
+    <script>
+        function mudarCor(cor) {
+            document.body.style.backgroundColor = cor;
+        }
+    </script>
+</body>
+</html>

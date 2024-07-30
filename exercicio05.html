@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - JAVASCRIPT</title>
+</head>
+<body>
+    <form>
+        <label><input type="checkbox" class="checkitem" onclick="verificarChecks()"> Item 1</label><br>
+        <label><input type="checkbox" class="checkitem" onclick="verificarChecks()"> Item 2</label><br>
+        <label><input type="checkbox" class="checkitem" onclick="verificarChecks()"> Item 3</label><br>
+        <label><input type="checkbox" class="checkitem" onclick="verificarChecks()"> Item 4</label><br>
+        <button id="submitButton" disabled>Enviar</button>
+    </form>
+
+    <script>
+        function verificarChecks() {
+            const checks = document.querySelectorAll('.checkitem:checked');
+            const button = document.getElementById('submitButton');
+            if (checks.length >= 2) {
+                button.disabled = false;
+            } else {
+                button.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

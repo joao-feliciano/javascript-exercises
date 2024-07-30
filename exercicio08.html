@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 8 - JAVASCRIPT</title>
+    <style>
+        #paragrafo {
+            font-size: 16px;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="paragrafo">Este é um parágrafo de exemplo.</p>
+        <button onclick="mudarCorFonte('branco')">Cor da Fonte Branca</button>
+        <button onclick="mudarCorFonte('preto')">Cor da Fonte Preta</button>
+        <button onclick="mudarCorFundo('branco')">Fundo Branco</button>
+        <button onclick="mudarCorFundo('preto')">Fundo Preto</button>
+        <button onclick="ajustarTamanhoFonte('aumentar')">+</button>
+        <button onclick="ajustarTamanhoFonte('diminuir')">-</button>
+        <button onclick="transformarTexto('maiuscula')">Maiúscula</button>
+        <button onclick="transformarTexto('minuscula')">Minúscula</button>
+    </div>
+
+    <script>
+        function mudarCorFonte(cor) {
+            var paragrafo = document.getElementById('paragrafo');
+            if (cor === 'branco') {
+                paragrafo.style.color = 'white';
+            } else {
+                paragrafo.style.color = 'black';
+            }
+        }
+
+        function mudarCorFundo(cor) {
+            var paragrafo = document.getElementById('paragrafo');
+            if (cor === 'branco') {
+                paragrafo.style.backgroundColor = 'white';
+            } else {
+                paragrafo.style.backgroundColor = 'black';
+            }
+        }
+
+        function ajustarTamanhoFonte(acao) {
+            var paragrafo = document.getElementById('paragrafo');
+            var tamanhoAtual = window.getComputedStyle(paragrafo, null).getPropertyValue('font-size');
+            var tamanhoNovo = parseFloat(tamanhoAtual);
+            if (acao === 'aumentar') {
+                tamanhoNovo += 2;
+            } else {
+                tamanhoNovo -= 2;
+            }
+            paragrafo.style.fontSize = tamanhoNovo + 'px';
+        }
+
+        function transformarTexto(acao) {
+            var paragrafo = document.getElementById('paragrafo');
+            if (acao === 'maiuscula') {
+                paragrafo.style.textTransform = 'uppercase';
+            } else {
+                paragrafo.style.textTransform = 'lowercase';
+            }
+        }
+    </script>
+</body>
+</html>

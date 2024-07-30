@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - JAVASCRIPT</title>
+</head>
+<body>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, id, veritatis aperiam modi dignissimos deleniti praesentium ab, consectetur maxime provident officia! Impedit esse ea rerum, sit illum mollitia quaerat? Qui.</p>
+    <button onclick="toggleTexto()">Mostrar/Ocultar Texto</button>
+
+    <script>
+        function toggleTexto() {
+            const paragrafo = document.getElementById('texto');
+            if (paragrafo.style.display === 'none') {
+                paragrafo.style.display = 'block';
+            } else {
+                paragrafo.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

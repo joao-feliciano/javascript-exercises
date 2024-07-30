@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 6 - JAVASCRIPT</title>
+    <style>
+        #paragrafo {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="paragrafo">Este é um parágrafo de exemplo.</p>
+        <button onclick="mudarCorFonte('branco')">Cor da Fonte Branca</button>
+        <button onclick="mudarCorFonte('preto')">Cor da Fonte Preta</button>
+        <button onclick="mudarCorFundo('branco')">Fundo Branco</button>
+        <button onclick="mudarCorFundo('preto')">Fundo Preto</button>
+    </div>
+
+    <script>
+        function mudarCorFonte(cor) {
+            var paragrafo = document.getElementById('paragrafo');
+            if (cor === 'branco') {
+                paragrafo.style.color = 'white';
+            } else {
+                paragrafo.style.color = 'black';
+            }
+        }
+
+        function mudarCorFundo(cor) {
+            var paragrafo = document.getElementById('paragrafo');
+            if (cor === 'branco') {
+                paragrafo.style.backgroundColor = 'white';
+            } else {
+                paragrafo.style.backgroundColor = 'black';
+            }
+        }
+    </script>
+</body>
+</html>
